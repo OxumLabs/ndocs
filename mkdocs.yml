@@ -1,0 +1,19 @@
+site_name: Neit Dcos
+theme:
+  name: material
+  palette:
+    scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - navigation.search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/oxumlabs/neit
