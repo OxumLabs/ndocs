@@ -38,19 +38,83 @@ Neit is backed by **extensive documentation**, providing clear guides, examples,
 
 #### **⚠️ Neit is not ready for production use and is still in development!**
 
-Neit has an installer named **neitset** available at [Neitset Git Repo](https://github.com/oxumlabs/neitset).
+> At current state neit doesn't have a stable installer and **neitset** is
+> not ready to use as , again its not stable , so we encourage you to do the following :-
 
-_This installer requires you to have admin privileges to install and set up **LLVM** and **Neit** on Windows and **Clang**, **LLD** on Linux._
+### To Download and setup Neit:
 
-Follow these simple steps to get Neit up and running:
+- **On Linux:**
 
-1. **Download** the latest version of neitset from the GitHub repository.
-2. **Run** the installer and follow the on-screen instructions to install the required dependencies.
-3. **Verify** the installation by opening your terminal or command prompt and typing:
-   ```bash
-   neit --version
-   ```
-   If everything is set up correctly, you should see the version of Neit displayed!
+  - Download the Linux Zip File From the Release section.
+  - Extract and place the Neit executable in your bin folder (`/usr/bin`).
+  - Make it executable by running:
+    ```bash
+    sudo chmod +x /usr/bin/neit
+    ```
+  - Ensure you have installed `clang` and `lld` on your system:
+    - Some common commands are:
+      - For Debian/Ubuntu (or derivatives):
+        ```bash
+        sudo apt install clang lld
+        ```
+      - For CentOS/RHEL 8 or later (or derivatives):
+        ```bash
+        sudo dnf install clang lld
+        ```
+      - For CentOS/RHEL 7 (or derivatives):
+        ```bash
+        sudo yum install clang lld
+        ```
+      - For Arch Linux (or derivatives):
+        ```bash
+        sudo pacman -S clang lld
+        ```
+      - For openSUSE (or derivatives):
+        ```bash
+        sudo zypper install clang lld
+        ```
+      - For Gentoo (or derivatives):
+        ```bash
+        sudo emerge dev-lang/clang
+        ```
+      - For Alpine (or derivatives):
+        ```bash
+        sudo apk add clang lld
+        ```
+
+- **On Windows:**
+  - Download the Clang installer from the LLVM releases page: [LLVM-19.1.1-win64.exe](https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.1/LLVM-19.1.1-win64.exe).
+  - Run the installer and follow the prompts to install Clang.
+
+#### **Setting Up Clang and Neit in PATH**
+
+- **Using PowerShell:**
+
+  1. Open PowerShell as Administrator.
+  2. Run the following commands to add Clang and Neit to your system PATH (adjust paths as needed):
+
+  `powershell[System.Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Path\To\Clang;C:\Path\To\Neit", [System.EnvironmentVariableTarget]::Machine)`
+
+- **Using Command Prompt:**
+
+  1. Open Command Prompt as Administrator.
+  2. Run the following command:
+
+  ```cmd
+  setx Path "%Path%;C:\Path\To\Clang;C:\Path\To\Neit" /M
+  ```
+
+- **Using GUI:**
+  1. Right-click on `This PC` or `Computer` on your desktop or in File Explorer.
+  2. Click on `Properties`.
+  3. Select `Advanced system settings`.
+  4. Click the `Environment Variables` button.
+  5. In the `System variables` section, scroll to find the `Path` variable and select it.
+  6. Click `Edit`, and then `New`.
+  7. Add the paths for Clang and Neit:
+     - `C:\Path\To\Clang`
+     - `C:\Path\To\Neit`
+  8. Click `OK` to close all dialog boxes.
 
 ---
 

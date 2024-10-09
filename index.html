@@ -371,6 +371,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#to-download-and-setup-neit" class="md-nav__link">
+    <span class="md-ellipsis">
+      To Download and setup Neit:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="To Download and setup Neit:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-clang-and-neit-in-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Clang and Neit in PATH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -513,6 +537,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#to-download-and-setup-neit" class="md-nav__link">
+    <span class="md-ellipsis">
+      To Download and setup Neit:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="To Download and setup Neit:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-clang-and-neit-in-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Clang and Neit in PATH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -553,17 +601,92 @@
 <h2 id="getting-started">📚 Getting Started</h2>
 <h3 id="installation"><strong>Installation</strong></h3>
 <h4 id="neit-is-not-ready-for-production-use-and-is-still-in-development"><strong>⚠️ Neit is not ready for production use and is still in development!</strong></h4>
-<p>Neit has an installer named <strong>neitset</strong> available at <a href="https://github.com/oxumlabs/neitset">Neitset Git Repo</a>.</p>
-<p><em>This installer requires you to have admin privileges to install and set up <strong>LLVM</strong> and <strong>Neit</strong> on Windows and <strong>Clang</strong>, <strong>LLD</strong> on Linux.</em></p>
-<p>Follow these simple steps to get Neit up and running:</p>
-<ol>
-<li><strong>Download</strong> the latest version of neitset from the GitHub repository.</li>
-<li><strong>Run</strong> the installer and follow the on-screen instructions to install the required dependencies.</li>
-<li><strong>Verify</strong> the installation by opening your terminal or command prompt and typing:
-   <code>bash
-   neit --version</code>
-   If everything is set up correctly, you should see the version of Neit displayed!</li>
-</ol>
+<blockquote>
+<p>At current state neit doesn't have a stable installer and <strong>neitset</strong> is
+not ready to use as , again its not stable , so we encourage you to do the following :-</p>
+</blockquote>
+<h3 id="to-download-and-setup-neit">To Download and setup Neit:</h3>
+<ul>
+<li>
+<p><strong>On Linux:</strong></p>
+</li>
+<li>
+<p>Download the Linux Zip File From the Release section.</p>
+</li>
+<li>Extract and place the Neit executable in your bin folder (<code>/usr/bin</code>).</li>
+<li>Make it executable by running:
+    <code>bash
+    sudo chmod +x /usr/bin/neit</code></li>
+<li>
+<p>Ensure you have installed <code>clang</code> and <code>lld</code> on your system:</p>
+<ul>
+<li>Some common commands are:</li>
+<li>For Debian/Ubuntu (or derivatives):
+    <code>bash
+    sudo apt install clang lld</code></li>
+<li>For CentOS/RHEL 8 or later (or derivatives):
+    <code>bash
+    sudo dnf install clang lld</code></li>
+<li>For CentOS/RHEL 7 (or derivatives):
+    <code>bash
+    sudo yum install clang lld</code></li>
+<li>For Arch Linux (or derivatives):
+    <code>bash
+    sudo pacman -S clang lld</code></li>
+<li>For openSUSE (or derivatives):
+    <code>bash
+    sudo zypper install clang lld</code></li>
+<li>For Gentoo (or derivatives):
+    <code>bash
+    sudo emerge dev-lang/clang</code></li>
+<li>For Alpine (or derivatives):
+    <code>bash
+    sudo apk add clang lld</code></li>
+</ul>
+</li>
+<li>
+<p><strong>On Windows:</strong></p>
+</li>
+<li>Download the Clang installer from the LLVM releases page: <a href="https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.1/LLVM-19.1.1-win64.exe">LLVM-19.1.1-win64.exe</a>.</li>
+<li>Run the installer and follow the prompts to install Clang.</li>
+</ul>
+<h4 id="setting-up-clang-and-neit-in-path"><strong>Setting Up Clang and Neit in PATH</strong></h4>
+<ul>
+<li>
+<p><strong>Using PowerShell:</strong></p>
+</li>
+<li>
+<p>Open PowerShell as Administrator.</p>
+</li>
+<li>Run the following commands to add Clang and Neit to your system PATH (adjust paths as needed):</li>
+</ul>
+<p><code>powershell[System.Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Path\To\Clang;C:\Path\To\Neit", [System.EnvironmentVariableTarget]::Machine)</code></p>
+<ul>
+<li>
+<p><strong>Using Command Prompt:</strong></p>
+</li>
+<li>
+<p>Open Command Prompt as Administrator.</p>
+</li>
+<li>Run the following command:</li>
+</ul>
+<p><code>cmd
+  setx Path "%Path%;C:\Path\To\Clang;C:\Path\To\Neit" /M</code></p>
+<ul>
+<li><strong>Using GUI:</strong></li>
+<li>Right-click on <code>This PC</code> or <code>Computer</code> on your desktop or in File Explorer.</li>
+<li>Click on <code>Properties</code>.</li>
+<li>Select <code>Advanced system settings</code>.</li>
+<li>Click the <code>Environment Variables</code> button.</li>
+<li>In the <code>System variables</code> section, scroll to find the <code>Path</code> variable and select it.</li>
+<li>Click <code>Edit</code>, and then <code>New</code>.</li>
+<li>Add the paths for Clang and Neit:<ul>
+<li><code>C:\Path\To\Clang</code></li>
+<li><code>C:\Path\To\Neit</code></li>
+</ul>
+</li>
+<li>Click <code>OK</code> to close all dialog boxes.</li>
+</ul>
 <hr />
 <p>Thank you for visiting the Neit documentation! Together, let's push the boundaries of what's possible in programming. 🌟</p>
 <blockquote>
