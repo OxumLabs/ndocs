@@ -636,8 +636,9 @@ not ready to use as , again its not stable , so we encourage you to do the follo
 <li>
 <p><strong>On Windows:</strong></p>
 </li>
-<li>Download the Clang installer from the LLVM releases page: <a href="https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.1/LLVM-19.1.1-win64.exe">LLVM-19.1.1-win64.exe</a>.</li>
-<li>Run the installer and follow the prompts to install Clang.</li>
+<li>Download and Install <a href="https://github.com/jmeubank/tdm-gcc/releases/download/v10.3.0-tdm64-2/tdm64-gcc-10.3.0-2.exe">TDM-GCC</a>.</li>
+<li>Run the installer and follow the prompts to install it.</li>
+<li>Download and install <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">vc_redist</a></li>
 </ul>
 <h4 id="setting-up-clang-and-neit-in-path"><strong>Setting Up Clang and Neit in PATH</strong></h4>
 <ul>
@@ -647,9 +648,9 @@ not ready to use as , again its not stable , so we encourage you to do the follo
 <li>
 <p>Open PowerShell as Administrator.</p>
 </li>
-<li>Run the following commands to add Clang and Neit to your system PATH (adjust paths as needed):</li>
+<li>Run the following commands to add Neit to your system PATH (adjust paths as needed):</li>
 </ul>
-<p><code>[System.Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Path\To\Clang;C:\Path\To\Neit", [System.EnvironmentVariableTarget]::Machine)</code></p>
+<p><code>[System.Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Path\To\Neit", [System.EnvironmentVariableTarget]::Machine)</code></p>
 <ul>
 <li>
 <p><strong>Using Command Prompt:</strong></p>
@@ -660,7 +661,7 @@ not ready to use as , again its not stable , so we encourage you to do the follo
 <li>Run the following command:</li>
 </ul>
 <p><code>cmd
-  setx Path "%Path%;C:\Path\To\Clang;C:\Path\To\Neit" /M</code></p>
+  setx Path "%Path%;C:\Path\To\Neit" /M</code></p>
 <ul>
 <li><strong>Using GUI:</strong></li>
 <li>Right-click on <code>This PC</code> or <code>Computer</code> on your desktop or in File Explorer.</li>
@@ -669,8 +670,7 @@ not ready to use as , again its not stable , so we encourage you to do the follo
 <li>Click the <code>Environment Variables</code> button.</li>
 <li>In the <code>System variables</code> section, scroll to find the <code>Path</code> variable and select it.</li>
 <li>Click <code>Edit</code>, and then <code>New</code>.</li>
-<li>Add the paths for Clang and Neit:<ul>
-<li><code>C:\Path\To\Clang</code></li>
+<li>Add the paths for and Neit:<ul>
 <li><code>C:\Path\To\Neit</code></li>
 </ul>
 </li>
