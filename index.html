@@ -358,9 +358,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-clang-and-neit-in-path" class="md-nav__link">
+  <a href="#setting-up-neit-in-path" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting Up Clang and Neit in PATH
+      Setting Up Neit in PATH
     </span>
   </a>
   
@@ -544,9 +544,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-clang-and-neit-in-path" class="md-nav__link">
+  <a href="#setting-up-neit-in-path" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting Up Clang and Neit in PATH
+      Setting Up Neit in PATH
     </span>
   </a>
   
@@ -607,12 +607,18 @@ not ready to use as , again its not stable , so we encourage you to do the follo
 <p><strong>On Linux:</strong></p>
 </li>
 <li>
-<p>Download the Linux Zip File From the Release section.</p>
+<p>Download the Linux Zip File From the <a href="https://github.com/OxumLabs/neit/releases">release</a> section.</p>
 </li>
-<li>Extract and place the Neit executable in your bin folder (<code>/usr/bin</code>).</li>
-<li>Make it executable by running:
+<li>Extract the executable and open terminal in the extracted directory</li>
+<li>Now run the following commands:
     <code>bash
-    sudo chmod +x /usr/bin/neit</code></li>
+    #make binary executable
+    sudo chmod +x ./neit
+    #move binary to local/bin
+    sudo mv ./neit /usr/local/bin
+    #now depending upon your shell reload it (you can also close all terminal instances and open them again to reload)
+    #this is for bash
+    source ~/.bashrc</code></li>
 <li>
 <p>Ensure you have installed <code>clang</code> and <code>lld</code> on your system:</p>
 <ul>
@@ -639,8 +645,13 @@ not ready to use as , again its not stable , so we encourage you to do the follo
 <li>Download and Install <a href="https://github.com/jmeubank/tdm-gcc/releases/download/v10.3.0-tdm64-2/tdm64-gcc-10.3.0-2.exe">TDM-GCC</a>.</li>
 <li>Run the installer and follow the prompts to install it.</li>
 <li>Download and install <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">vc_redist</a></li>
+<li>
+<blockquote>
+<p>NOTE : You can also use <code>clang</code> as a compiler and linker for neit but then you need to manually set it on path (neit will auto detect clang and use it , btw clang provides more optimisation)</p>
+</blockquote>
+</li>
 </ul>
-<h4 id="setting-up-clang-and-neit-in-path"><strong>Setting Up Clang and Neit in PATH</strong></h4>
+<h4 id="setting-up-neit-in-path"><strong>Setting Up Neit in PATH</strong></h4>
 <ul>
 <li>
 <p><strong>Using PowerShell:</strong></p>
