@@ -1,0 +1,69 @@
+/* Custom Styles for Code Blocks */
+
+/* Hide the "Made with Dracula theme" watermark */
+footer .dracula-credit {
+    display: none !important;
+}
+
+/* Target all <pre> elements for code blocks */
+pre {
+    background-color: #2e2e2e; /* Dark background for code blocks */
+    color: #ffffff; /* Light text color */
+    border-left: 0.4em solid #d86b4a; /* Left border for accent */
+    padding: 1em; /* Padding around the code */
+    border-radius: 5px; /* Rounded corners */
+    overflow-x: auto; /* Enable horizontal scrolling for long lines */
+}
+
+/* Target <code> elements within <pre> */
+pre code {
+    font-size: 0.95em !important; /* Slightly smaller font size */
+    font-family: 'Courier New', monospace !important; /* Monospace font for code */
+    white-space: pre; /* Preserve whitespace */
+    display: block; /* Ensure it takes full width */
+}
+
+/* Optional: Add a hover effect */
+pre:hover {
+    background-color: #3b3b3b; /* Slightly lighter on hover */
+}
+
+/* Syntax Highlighting Styles */
+
+/* Highlight for function declarations */
+.fn {
+    color: #d86b4a !important; /* Function color */
+    font-weight: bold !important; /* Bold for functions */
+    font-size: 0.95em !important; /* Reduced font size */
+}
+
+/* Highlight for comments */
+.comment {
+    color: #a8a8a8 !important; /* Lighter color for comments */
+    font-size: 0.95em !important; /* Reduced font size */
+}
+
+/* Highlight for keywords */
+.keyword {
+    color: #66d9ef !important; /* Blue for keywords */
+    font-weight: bold !important; /* Bold for keywords */
+    font-size: 0.95em !important; /* Reduced font size */
+}
+
+/* Highlight for variable names */
+.variable {
+    color: #f8f8f2 !important; /* Light color for variables */
+    font-size: 0.95em !important; /* Reduced font size */
+}
+
+/* Highlight for operators */
+.operator {
+    color: #fd971f !important; /* Orange for operators */
+    font-size: 0.95em !important; /* Reduced font size */
+}
+
+/* Example for strings (if applicable) */
+.string {
+    color: #e6db74 !important; /* Yellow for strings */
+    font-size: 0.95em !important; /* Reduced font size */
+}
