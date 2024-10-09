@@ -794,6 +794,19 @@ fn hi() {
 </ul>
 <hr style="border: 1.2px solid white; width: auto;">
 
+<p><strong>Example:</strong></p>
+<pre><code class="language-neit">if {
+    1-1 == 1 : no
+    1-1 == 2 : another_no
+    1-1 == 0 : yes
+}
+</code></pre>
+<p>You need to define each case using the <code>case</code> statement:</p>
+<pre><code class="language-neit">case no {
+    # Code for the &quot;no&quot; case
+    print(&quot;Condition was false.&quot;)
+}
+</code></pre>
 <h3 id="4-memory-management">4. Memory Management</h3>
 <blockquote>
 <p>In C or C++ it is pretty easy to shoot yourself on the foot , XD not really but memory leaks and seg faults are bit of hassle isn't it? neit allows you to have Cs flexibility while maintaining safety</p>
@@ -810,19 +823,6 @@ release name
 Each memory you allocate needs to be free-ed at some point in time in your code else need would refuse to compile or run</p>
 <hr style="border: 3px solid green; width: auto;">
 
-<p><strong>Example:</strong></p>
-<pre><code class="language-neit">if {
-    1-1 == 1 : no
-    1-1 == 2 : another_no
-    1-1 == 0 : yes
-}
-</code></pre>
-<p>You need to define each case using the <code>case</code> statement:</p>
-<pre><code class="language-neit">case no {
-    # Code for the &quot;no&quot; case
-    print(&quot;Condition was false.&quot;)
-}
-</code></pre>
 <hr />
 <h2 id="examples">Examples</h2>
 <h3 id="writing-comments">Writing Comments</h3>
